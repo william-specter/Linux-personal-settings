@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:cantarell 10
+font pango:Cantarell 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -51,12 +51,8 @@ bindsym Print exec gnome-screenshot -i
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
-
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -213,11 +209,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	position top
-	#status_command i3status
         status_command i3blocks
-	#workspace_buttons yes
-	#mode hide
-
+	height 20
+	tray_output primary
 	colors{
 		background #222222
 		statusline #eeeeee
@@ -260,13 +254,16 @@ assign [class="code"] $ws3
 assign [class="rhythmbox"] $ws6
 
 # Transparency
-exec picom
+exec picom -b -f
 
 # Webcam
-bindsym $mod+c exec /home/william/.config/i3/webcam.sh
+bindsym $mod+c exec guvcview
 
 # Network
 exec_always nm-applet
+
+# Switch keyboard language
+#exec --no-startup-id setxkbmap -layout es,us -option grp:alt_shit_toggle
 
 # Some shorcuts for some apps
 # Alacritty
@@ -276,7 +273,7 @@ bindsym mod1+2 exec thunar
 # Firefox
 bindsym mod1+3 exec firefox
 # Chromium
-bindsym mod1+4 exec chromium
+bindsym mod1+4 exec emacs
 # Rhythmbox
 bindsym mod1+5 exec rhythmbox
 
