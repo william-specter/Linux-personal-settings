@@ -6,11 +6,11 @@
   - Alias y funciones útiles
 
 - **Editor de texto**
-  - Configuración de Emacs/DoomEmacs
+  - Configuración de `Emacs/DoomEmacs`
   - Plugins esenciales
   - Atajos de teclado personalizados
 
 - **Gestor de ventanas**
-  - Configuración de i3wm
+  - Configuración de `i3wm`
   - Scripts de automatización
   - Atajos de teclado
