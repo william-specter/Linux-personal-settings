@@ -132,12 +132,16 @@ alias xampp="sudo /opt/lampp/manager-linux-x64.run"
 
 alias sambas="sudo systemctl restart smbd nmbd"
 
+alias zellij="/home/william/Programs/zellij"
+
 alias a="php artisan"
 alias pas="php artisan serve"
 alias pam="php artisan migrate"
 alias amf="php artisan migrate:fresh"
 
 alias new-vite="yarn create vite"
+
+alias speedtest="/home/william/Programs/speedtest-1.2.0/speedtest"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Esto carga nvm
